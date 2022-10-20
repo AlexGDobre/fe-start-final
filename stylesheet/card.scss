@@ -1,0 +1,77 @@
+@use 'vari';
+
+.card-main{
+  background-color: white;
+  padding: 5px;
+  border-radius: 4px;
+}
+.card-flex{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.card-image{
+  background-color: burlywood;
+}
+.card-content{
+  @include vari.font(poppins,13,500);
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .card-content-firstRow{
+    display: flex;
+    justify-content: space-between;
+  }
+  .date-text{
+  margin: 1em 0;
+  }
+  .orange-text{
+    color: vari.$colorOrange;
+  }
+}
+.card-text{
+  margin-top: 1em;
+  @include vari.font(noto,13,400);
+}
+.date-text{
+  color: rgba(181, 183, 195, 1);
+}
+.author-text{
+  display: block;
+  margin-bottom:2em;
+  text-transform: capitalize;
+  span{
+    color: vari.$colorOrange;
+  }
+}
+.card-header{
+  // height: 4em;
+  font-weight: 500;
+  &-18{
+    font-size: 18px;
+  };
+  &-30{
+    font-size: 30px;
+  };
+  &-40{
+    font-size: 40px;
+    font-weight: 700;
+    width: 90%;
+    margin: 0 auto;
+  };
+}
+.linkbtn{
+  display: block;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 8%;
+  border: 1px solid rgba(61, 61, 60, 1);
+  border-radius: 4px;
+  padding: 0.5em;
+  &:hover{
+    background-color: vari.$colorOrange;
+    color: white;
+    border-color:  rgb(158, 118, 33);
+  }
+}

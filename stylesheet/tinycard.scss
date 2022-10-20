@@ -1,0 +1,12 @@
+@use 'vari';
+
+.tiny-card{
+  article{
+    h3{
+      @include vari.font(poppins,13,);
+      text-transform: uppercase;
+      padding-bottom: 10px;
+      border-bottom: 1px solid rgba(61, 61, 60, 1);
+    }
+  }
+}

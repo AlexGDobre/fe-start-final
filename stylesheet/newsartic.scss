@@ -1,0 +1,145 @@
+@use 'vari';
+@use 'card';
+
+.main-section{
+  display: flex;
+  flex-direction: column;
+  >section:not(:last-of-type){
+  @include vari.container;
+  }
+  >section:last-of-type{
+    background-color: vari.$bgcolortheme;
+    >section{
+      @include vari.container;
+    }
+  }
+}
+.main-section-header-image{
+  background: no-repeat center url(../cont/img.png);
+  background-size: cover;
+  height: 416px;
+}
+.section-news-author{
+  margin-top: 65px;
+  display: flex;
+  flex-direction: column;
+  .author-text{
+    margin: 0;
+  }
+}
+.section-news-author2{
+  flex-direction: row;
+  align-items: center;
+  display: none;
+}
+
+.section-news{
+  margin-bottom: 80px;
+  display: flex;
+  flex-wrap: wrap;
+  // column-gap: 8%;
+  justify-content: space-between;
+}
+@media(max-width:1140px){
+  .section-news{
+    justify-content: center;
+  }
+  .section-news-author1{
+    display: none;
+  }
+  .section-news-author2{
+    display: block;
+  }
+}
+.section-news-content{
+  max-width: 621px;
+  // min-width: 280px;
+  article{
+    margin-bottom: 49px;
+    h2{
+      @include vari.font(noto,40,700);
+      // line-height: 1.2em;
+    }
+    p{
+    margin-top: 20px;
+
+      @include vari.font(poppins,18,500)
+    }
+  }
+}
+.news-content-header{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 26px 0;
+}
+.news-content-nav{
+  display: flex;
+  a{
+    margin: 0 2px;
+    color: vari.$colorOrange;
+  }
+}
+.news-content-text{
+  p{
+    @include vari.font(noto,13,400);
+  }
+}
+.news-content-text-img{
+  margin: 30px 0;
+  p{
+    margin-top: 20px;
+    @include vari.font(noto,10,400);
+    font-style: italic;
+  }
+}
+
+.section-news3{
+  margin-top: 65px;
+  .card-block{
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+  }
+  .card-image, .card-content{
+    width: 143px;
+    height: 134px;
+  }
+  article{
+    h3{
+      @include vari.font(poppins,13,);
+      text-transform: uppercase;
+      padding-bottom: 10px;
+      margin-bottom: 16px;
+      border-bottom: 1px solid rgba(61, 61, 60, 1);
+    }
+  }
+}
+
+.main-section-cards{
+  display: flex;
+  column-gap: 2%;
+  justify-content: space-between;
+  overflow-x: scroll;
+  .card-main{
+    max-width: 300px;
+    min-width: 300px;
+    min-height: 480px;
+  }
+  .card-image{
+    height: 235px;
+    width:290px;
+  }
+  .card-flex{
+    flex-direction: column;
+  }
+  .card-content{
+    min-height: 235px;
+    .card-header{
+      width: 90%;
+    }
+  }
+  .linkbth{
+    margin-top: 20px;
+  }
+}
